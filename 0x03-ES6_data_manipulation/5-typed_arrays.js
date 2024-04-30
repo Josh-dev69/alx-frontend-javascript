@@ -1,4 +1,4 @@
-export default function createInt8TypedArray(length, position, value) {
+function createInt8TypedArray(length, position, value) {
   // Check if the position is within the range of the array
   if (position < 0 || position >= length) {
     throw new Error("Position outside range");
@@ -16,3 +16,5 @@ export default function createInt8TypedArray(length, position, value) {
   // Return the ArrayBuffer
   return new DataView(buffer);
 }
+
+export default createInt8TypedArray;
